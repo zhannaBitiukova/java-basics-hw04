@@ -1,6 +1,6 @@
 # java-basics-hw03
 
-This is a homework for the Java OOP Part I
+This is a homework for the Java OOP Part II
 
 ## IntelliJ IDEA project configuration
 1. Clone this project to your local environment
