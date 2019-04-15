@@ -5,7 +5,7 @@ This is a homework for the Java OOP Part II
 ## IntelliJ IDEA project configuration
 1. Clone this project to your local environment
 
-    ```git clone https://github.com/kermek/java-basics-hw03.git``` 
+    ```git clone https://github.com/kermek/java-basics-hw04.git``` 
 2. Import in IntelliJ IDEA using `File -> New -> Project from Existing Sources...`.
 3. Select the directory that you cloned to.
 4. Go through the `Import Project` wizard by clicking `Next`.
