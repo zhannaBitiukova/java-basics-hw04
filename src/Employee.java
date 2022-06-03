@@ -1,5 +1,13 @@
-public class Employee {
+interface Payments{
+  public void calculatePay();
+}
+
+public class Employee implements Payments {
   // TODO fix class declaration and declare variables here
+  public void calculatePay() {
+    System.out.println("placeholder for calculatePay");
+  }
+
 
   public Employee(String employeeId, String name) {
     // TODO fill in code here
