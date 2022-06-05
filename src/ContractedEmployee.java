@@ -1,50 +1,40 @@
 public class ContractedEmployee extends Employee {
-  // TODO fix class declaration and declare variables here
+  private String federalTaxID = "";
+  private double hourlyRate = 0;
+  private double numberOfHoursWorked = 0;
 
-  public double hourlyRate = 0;
-  public double numberOfHoursWorked = 0;
-  public String federalTaxID = "";
-  public String employeeID = "";
-  public String name = "";
-
+  @Override
+  public void calculatePay() {
+    this.averageMonthlySalary = getHourlyRate() * getNumberOfHoursWorked();
+  }
   public ContractedEmployee(String employeeId, String name, String federalTaxId) {
-    super();
-    // TODO fill in code here
-    this.employeeID = employeeId;
-    this.name = name;
-    this.federalTaxID = federalTaxId;
+    setEmployeeId(employeeId);
+    setName(name);
+    setFederalTaxId(federalTaxId);
   }
 
   public String getFederalTaxId() {
-    // TODO fill in code here and replace the return statement
-    return "";
+    return this.federalTaxID;
   }
 
   public void setFederalTaxId(String federalTaxId) {
-    // TODO fill in code here
     this.federalTaxID = federalTaxId;
   }
 
   public double getHourlyRate() {
-    // TODO fill in code here and replace the return statement
-    double averageMonthlySalary = this.hourlyRate * this.numberOfHoursWorked;
-    return averageMonthlySalary;
+    return this.hourlyRate;
   }
 
   public void setHourlyRate(double hourlyRate) {
-    // TODO fill in code here
     this.hourlyRate = hourlyRate;
   }
 
   public double getNumberOfHoursWorked() {
-    // TODO fill in code here and replace the return statement
     return this.numberOfHoursWorked;
   }
 
   public void setNumberOfHoursWorked(double numberOfHoursWorked) {
-    // TODO fill in code here
     this.numberOfHoursWorked = numberOfHoursWorked;
   }
 
-  // TODO fill in code here
 }

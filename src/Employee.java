@@ -1,44 +1,34 @@
-interface Payments{
-  public void calculatePay();
-}
 
-public class Employee implements Payments {
-  // TODO fix class declaration and declare variables here
-  public void calculatePay() {
-    System.out.println("placeholder for calculatePay");
-  }
+public class Employee implements Payable {
+  public Employee() {}
+  private String employeeId = "";
+  private String name = "";
+  protected double averageMonthlySalary = 0;
 
+  public void calculatePay() {}
 
   public Employee(String employeeId, String name) {
-    // TODO fill in code here
+    this.employeeId = employeeId;
+    this.name = name;
   }
 
-  public String getEmployeeId() {
-    // TODO fill in code here and replace the return statement
-    return "";
-  }
+  public String getEmployeeId() { return this.employeeId; }
 
-  public void setEmployeeId(String employeeId) {
-    // TODO fill in code here
-  }
+  public void setEmployeeId(String employeeId) { this.employeeId = employeeId; }
 
-  public String getName() {
-    // TODO fill in code here and replace the return statement
-    return "";
-  }
+  public String getName() { return this.name; }
 
-  public void setName(String name) {
-    // TODO fill in code here
-  }
+  public void setName(String name) { this.name = name; }
 
-  public double getAverageMonthlySalary() {
-    // TODO fill in code here and replace the return statement
-    return 0;
-  }
+  public double getAverageMonthlySalary() { return this.averageMonthlySalary; }
 
   @Override
   public String toString() {
-    // TODO fill in code here and replace the return statement, be sure to format double value
-    return "";
+    String format = "%.2f";
+    String averageMonthlySalaryFormatted = String.format(format, getAverageMonthlySalary());
+    return "Average monthly salary is "
+            + averageMonthlySalaryFormatted
+            + " for employee " + getName()
+            + ", " + getEmployeeId();
   }
 }
